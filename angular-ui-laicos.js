@@ -1,0 +1,2 @@
+!function(i,o){"use strict";o.module("laicos.ui",["laicos.ui.backgroundimage"])}(window,window.angular);
+!function(i,e){"use strict";e.module("laicos.ui.backgroundimage",[]).directive("laicosUiBackgroundImage",[function(){return{restrict:"E",templateUrl:"/directives/BackgroundImage.html",link:function(i,e,n){e.css({"background-image":n.src,"background-size":n.size||"contain","background-repeat":n.repeat||"no-repeat","background-position":n.position||"center"})}}}])}(window,window.angular);
