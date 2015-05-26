@@ -17,7 +17,7 @@ gulp.task('jsMin', function() {
 		path.join(srcPath, '**/*.js')
 	])
 		.pipe(uglify())
-		.pipe(concat('uglified.js'))
+		.pipe(concat('jsmin.js'))
 		.pipe(gulp.dest(tmpPath))
 })
 
@@ -28,7 +28,9 @@ gulp.task('htmlMin', function() {
 		.pipe(minHtml({
 			empty: true
 		}))
-		.pipe(templateCache())
+		.pipe(templateCache({
+			module: "laicos.ui.templates"
+		}))
 		.pipe(gulp.dest(tmpPath))
 })
 

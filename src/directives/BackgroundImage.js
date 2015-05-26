@@ -11,7 +11,7 @@
 					restrict: 'E',
 					link: function ($scope, $element, $attrs) {
 						$attrs.$observe('src', function() {
-							console.log($attrs.src, $attrs)
+							//console.log($attrs.src, $attrs.size)
 							$element.css({
 								'background-image': 'url(' +$attrs.src +')',
 								'background-size': $attrs.size || 'contain',
