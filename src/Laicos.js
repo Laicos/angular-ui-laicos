@@ -12,6 +12,7 @@
 		"laicos.ui.textarea",
 		"laicos.ui.contenteditable",
 		"laicos.ui.webinfo",
+		"laicos.ui.compile",
 		'laicos.ui.templates'
 	])
 
