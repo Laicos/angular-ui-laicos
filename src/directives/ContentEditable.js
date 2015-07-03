@@ -17,6 +17,7 @@
 					},
 					link: function ($scope, $element, $attrs, ngModel) {
 						if (!ngModel) {
+							console.log("laicos.ui.contenteditable missing ngModel")
 							return
 						}
 
