@@ -13,8 +13,7 @@
 		"laicos.ui.contenteditable",
 		"laicos.ui.webinfo",
 		"laicos.ui.compile",
-		"laicos.ui.templates",
-		"laicos.ui.slide"
+		"laicos.ui.templates"
 	])
 
 })(window, window.angular);

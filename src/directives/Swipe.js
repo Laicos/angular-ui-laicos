@@ -13,7 +13,9 @@
 					restrict: "A",
 					link: function ($scope, $element, $attrs) {
 						var element = $element[0],
-							eventName = 'ontouchstart' in window ? "touchstart" : "mousedown"
+							eventName = 'ontouchstart' in window
+								? "touchstart"
+								: "mousedown"
 
 						element.addEventListener(eventName, onEvent, false)
 
