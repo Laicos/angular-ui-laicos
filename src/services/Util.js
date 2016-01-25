@@ -29,4 +29,46 @@
 			}
 		])
 
+		.service("laicos.ui.util.BeforeLeave", [
+			"$window",
+			"$rootScope",
+			function ($window, $rootScope) {
+				var listener
+				$rootScope.$on("$routeChangeStart", onNav)
+				$rootScope.$on("$stateChangeStart", onNav)
+
+				return {
+					on: function (f) {
+						if (!angular.isFunction(f)) {
+							throw new Error("BeforeLeave requires a function")
+						}
+						listener = f
+						$window.onbeforeunload = function () {
+							if (angular.isFunction(listener))
+								return listener()
+						}
+					},
+					off: function() {
+						listener = undefined
+						$window.onbeforeunload = undefined
+					}
+				}
+
+				function onNav(event) {
+					if (angular.isFunction(listener)) {
+						var text = listener()
+						if (!text) {
+							return
+						}
+						text += "\r\n \r\nAre you sure you want to leave this page?"
+						var ok = confirm(text)
+						if (!ok) {
+							event.preventDefault()
+							$rootScope.isBusy = false
+						}
+					}
+				}
+			}
+		])
+
 })(window.angular);
