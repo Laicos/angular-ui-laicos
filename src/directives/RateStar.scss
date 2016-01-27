@@ -1,0 +1,47 @@
+laicos-ui-ratestar {
+  display: block;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+  >span {
+    display: inline-block;
+    transition: all ease-out 250ms;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 0;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+    transform: scale(1);
+
+    /*&:first-child {
+      padding-left: 5px;
+    }
+    &:last-child {
+      padding-right: 5px;
+    }*/
+    &:not(.active) {
+      transform: scale(0.8);
+      //color: #444;
+    }
+    &:hover {
+      color: #664900;
+    }
+    &.active {
+      color: gold;
+    }
+
+    >i.material-icons {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(0,0,0, 0.25);
+      cursor: pointer;
+      outline: none;
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;
+    }
+  }
+}
