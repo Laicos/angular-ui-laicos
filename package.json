@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-laicos",
-  "version": "0.0.1",
+  "version": "0.0.12",
   "description": "Laicos Angular UI",
   "main": "angular-ui-laicos.js",
   "dependencies": {
